@@ -1,0 +1,13 @@
+name: simple-auth
+version: 0.1.0
+
+authors:
+  -  <osmond.oranagwa@andela.com>
+
+targets:
+  simple-auth:
+    main: src/simple-auth.cr
+
+crystal: 0.20.3
+
+license: MIT
