@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: simple-auth
+spec:
+  backend:
+    serviceName: default-http-backend
+    servicePort: 80
+  rules:
+  - host: simple-auth.me
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: simple-auth
+          servicePort: 3000

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: simple-auth
+spec:
+    type: LoadBalancer
+    ports:
+        - port: 3000
+          protocol: TCP
+    selector:
+        app: simple-auth

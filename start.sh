@@ -1,0 +1,1 @@
+OAUTH_CLIENT_ID=[your oauth id here] OAUTH_CLIENT_SECRET=[your oauth secret here] crystal run src/simple-auth.cr

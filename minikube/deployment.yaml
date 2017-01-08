@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: simple-auth
+spec:
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: simple-auth
+        spec:
+            containers: 
+            - name: simple-auth
+              image: xovox/simple-auth:0.0.1
+              ports:
+              - containerPort: 3000
+              env:
+                - name: OAUTH_CLIENT_SECRET
+                  value: [your client id here]
+                - name: OAUTH_CLIENT_ID
+                  value: [your oauth secret here]
+                - name: HOST
+                  value: http://simple-auth.me
